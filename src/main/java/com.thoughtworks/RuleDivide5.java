@@ -7,10 +7,7 @@ public class RuleDivide5 extends BaseRule {
 
     @Override
     public RuleDivide5 check() {
-        if (isClose()) {
-            return this;
-        }
-        if (getNum() % 5 == 0) {
+        if (isOpen() && getNum() % 5 == 0) {
             appendResult("Buzz");
         }
         return this;

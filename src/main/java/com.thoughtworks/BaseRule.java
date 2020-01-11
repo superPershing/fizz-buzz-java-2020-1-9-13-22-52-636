@@ -1,24 +1,26 @@
 package com.thoughtworks;
 
-public abstract class BaseRule implements Check{
-    private boolean open = true;
+public abstract class BaseRule implements Check {
+    private boolean open;
     private int num;
-    private String result = "";
+    private String result;
 
     public BaseRule(int num) {
         this.num = num;
+        this.open = true;
+        this.result = "";
     }
 
     public boolean isOpen() {
         return open;
     }
 
-    public boolean isClose() {
-        return !isOpen();
-    }
-
     public void setOpen(boolean open) {
         this.open = open;
+    }
+
+    public boolean isClose() {
+        return !isOpen();
     }
 
     public int getNum() {

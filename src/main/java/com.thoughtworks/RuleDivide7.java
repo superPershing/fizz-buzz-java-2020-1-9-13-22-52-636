@@ -7,10 +7,7 @@ public class RuleDivide7 extends BaseRule {
 
     @Override
     public RuleDivide7 check() {
-        if (isClose()) {
-            return this;
-        }
-        if (getNum() % 7 == 0) {
+        if (isOpen() && getNum() % 7 == 0) {
             appendResult("Whizz");
         }
         return this;
