@@ -1,10 +1,11 @@
 package com.thoughtworks;
 
 public class RuleWhenContains7 extends BaseRule {
-    private RuleWhenContains5 ruleWhenContains5 = new RuleWhenContains5(getNum());
+    private RuleWhenContains5 ruleWhenContains5;
 
     public RuleWhenContains7(int num) {
         super(num);
+        ruleWhenContains5 = new RuleWhenContains5(getNum());
     }
 
     @Override
